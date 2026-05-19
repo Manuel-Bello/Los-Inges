@@ -1,66 +1,241 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Los Inges | Cadillac F1 Team</title>
+    <style>
+        /* Variables de diseño Futurista/Minimalista */
+        :root {
+            --bg-color: #0a0e17;       /* Fondo oscuro profundo */
+            --card-bg: #121824;        /* Fondo de elementos */
+            --accent-neon: #00f0ff;    /* Cyan tecnológico */
+            --text-main: #e2e8f0;      /* Blanco suave */
+            --text-muted: #64748b;    /* Gris para datos secundarios */
+            --border-glow: #1e293b;    /* Bordes sutiles */
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+            margin: 0;
+            padding: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .main-container {
+            max-width: 800px;
+            width: 100%;
+            background: rgba(18, 24, 36, 0.6);
+            padding: 2.5rem;
+            border-radius: 16px;
+            border: 1px solid var(--border-glow);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Encabezados */
+        h1 {
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            letter-spacing: 6px;
+            margin: 0;
+            color: #ffffff;
+            font-weight: 800;
+            text-shadow: 0 0 20px rgba(0, 240, 255, 0.2);
+        }
+
+        h3 {
+            color: var(--accent-neon);
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Imagen estilizada */
+        .img-wrapper {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2.5rem;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            border: 1px solid rgba(0, 240, 255, 0.3);
+            box-shadow: 0 0 30px rgba(0, 240, 255, 0.1);
+            transition: transform 0.4s ease, border-color 0.4s ease;
+        }
+
+        img:hover {
+            transform: scale(1.02);
+            border-color: var(--accent-neon);
+        }
+
+        /* Sección de Pilotos */
+        p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        ol {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 3rem;
+        }
+
+        ol li {
+            position: relative;
+            padding: 0.75rem 1rem 0.75rem 2rem;
+            margin-bottom: 0.5rem;
+            background: rgba(30, 41, 59, 0.3);
+            border-radius: 6px;
+            border-left: 3px solid var(--accent-neon);
+            font-size: 1rem;
+            transition: background 0.3s;
+        }
+
+        ol li:hover {
+            background: rgba(0, 240, 255, 0.05);
+        }
+
+        ol li::before {
+            content: "//";
+            position: absolute;
+            left: 0.6rem;
+            color: var(--accent-neon);
+            font-family: monospace;
+            font-weight: bold;
+        }
+
+        /* Tabla Estilo Telemetría / Dashboard */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: 'Courier New', Courier, monospace; /* Tipografía tipo datos de computadora */
+            font-size: 0.9rem;
+        }
+
+        th {
+            text-align: left;
+            padding: 1rem;
+            background-color: rgba(30, 41, 59, 0.6);
+            color: var(--accent-neon);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 2px solid var(--border-glow);
+        }
+
+        td {
+            padding: 1rem;
+            border-bottom: 1px solid var(--border-glow);
+            color: var(--text-main);
+        }
+
+        tr:hover td {
+            background-color: rgba(255, 255, 255, 0.02);
+            color: #ffffff;
+        }
+
+        /* Enlaces */
+        a {
+            color: var(--accent-neon);
+            text-decoration: none;
+            border: 1px solid var(--accent-neon);
+            padding: 0.3rem 0.8rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+
+        a:hover {
+            background-color: var(--accent-neon);
+            color: var(--bg-color);
+            box-shadow: 0 0 15px rgba(0, 240, 255, 0.4);
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
-   <h1>Los inges</h1> 
-   <h3>Bienvenidos a la pagina de pilotos</h3>
-<img src="https://images.cults3d.com/3005JpOC5o3SyTdse4pLo30sElU=/516x516/filters:no_upscale():format(webp)/https://fbi.cults3d.com/uploaders/41446188/illustration-file/824144c9-da78-4abd-aebe-aad2ce3a349d/CADILLAC-F1-TEAM.jpg" alt="CADILLAC-F1-TEAM"/>
 
-   <p>Los pilotos que conforman este team son</p>
+    <div class="main-container">
+        <header>
+            <h1>Los inges</h1> 
+            <h3>Bienvenidos a la página de pilotos</h3>
+        </header>
 
-   <ol>
-        <li>Valeria Jatziry Flores Perez</li>
-        <li>Marco Antonio Contreras Carbajal</li>
-        <li>Daniela González Sánches</li>
-        <li>Manuel Alejandro Bello Hernández</li>
-        <li>Allison Yamilette Maldonado Santiago</li>
-   </ol>
+        <div class="img-wrapper">
+            <img src="https://images.cults3d.com/3005JpOC5o3SyTdse4pLo30sElU=/516x516/filters:no_upscale():format(webp)/https://fbi.cults3d.com/uploaders/41446188/illustration-file/824144c9-da78-4abd-aebe-aad2ce3a349d/CADILLAC-F1-TEAM.jpg" alt="CADILLAC-F1-TEAM"/>
+        </div>
 
-   <br>
+        <section>
+            <p>Los pilotos que conforman este team son</p>
+            <ol>
+                <li>Valeria Jatziry Flores Perez</li>
+                <li>Marco Antonio Contreras Carbajal</li>
+                <li>Daniela González Sánches</li>
+                <li>Manuel Alejandro Bello Hernández</li>
+                <li>Allison Yamilette Maldonado Santiago</li>
+            </ol>
+        </section>
 
-   <table>
-        <tr>
-            <th>Matrícula</th>
-            <th>Sexo</th>
-            <th>edad</th>
-            <th>Páginas</th>
-        </tr>
-        <tr>
-            <td>20253ds029</td>
-            <td>femenino</td>
-            <td>18</td>
-            <td><a href="integrantes/20253DS029.html"></a></td>
-        </tr>
-        <tr>
-            <td>20253ds027</td>
-            <td>femenino</td>
-            <td>20</td>
-            <td><a href="integrantes/20253ds027.html"></a></td>
-        </tr>
-        <tr>
-            <td>20253ds096</td>
-            <td>femenino</td>
-            <td>18</td>
-            <td><a href="integrantes/20253ds096.html"></a></td>
-        </tr>
-        <tr>
-            <td>20253ds010</td>
-            <td>masculino</td>
-            <td>18</td>
-            <td><a href="integrantes/20253DS010.html"></a></td>
-        </tr>
-        <tr>
-            <td>20253ds156</td>
-            <td>masculino</td>
-            <td>21</td>
-            <td><a href="integrantes/20253DS156.html"></a></td>
-        </tr>
-    </table>
+        <section>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Matrícula</th>
+                        <th>Sexo</th>
+                        <th>Edad</th>
+                        <th>Páginas</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>20253ds029</td>
+                        <td>femenino</td>
+                        <td>18</td>
+                        <td><a href="integrantes/20253DS029.html">Perfil</a></td>
+                    </tr>
+                    <tr>
+                        <td>20253ds027</td>
+                        <td>femenino</td>
+                        <td>20</td>
+                        <td><a href="integrantes/20253ds027.html">Perfil</a></td>
+                    </tr>
+                    <tr>
+                        <td>20253ds096</td>
+                        <td>femenino</td>
+                        <td>18</td>
+                        <td><a href="integrantes/20253ds096.html">Perfil</a></td>
+                    </tr>
+                    <tr>
+                        <td>20253ds010</td>
+                        <td>masculino</td>
+                        <td>18</td>
+                        <td><a href="integrantes/20253DS010.html">Perfil</a></td>
+                    </tr>
+                    <tr>
+                        <td>20253ds156</td>
+                        <td>masculino</td>
+                        <td>21</td>
+                        <td><a href="integrantes/20253DS156.html">Perfil</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
 
 </body>
-
 </html>
